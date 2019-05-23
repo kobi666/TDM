@@ -18,6 +18,7 @@ public class GameUnitObject : MonoBehaviour
         
     }
 
+    
 
     void FlipAnimationAgent()
     {
