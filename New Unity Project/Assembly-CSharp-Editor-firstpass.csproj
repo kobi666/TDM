@@ -59,6 +59,9 @@
      <Compile Include="Assets\Plugins\BezierSolution\Editor\BezierSplineEditor.cs" />
      <Compile Include="Assets\Plugins\BezierSolution\Editor\BezierUtils.cs" />
      <Compile Include="Assets\Plugins\BezierSolution\Editor\ParticlesFollowBezierEditor.cs" />
+     <Compile Include="Assets\Plugins\Stateorio\Components\Editor\FsmCoreCustomEditor.cs" />
+     <Compile Include="Assets\Plugins\Stateorio\Components\Editor\StateEntityDrawer.cs" />
+     <Compile Include="Assets\Plugins\Stateorio\Components\Editor\TransitionRuleDrawer.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>E:/_UnityProjects/TDM/New Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
