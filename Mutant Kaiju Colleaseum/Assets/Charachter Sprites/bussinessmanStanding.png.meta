@@ -1,0 +1,915 @@
+fileFormatVersion: 2
+guid: 71874c8add0690b4a9d96ee1a68c7eba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7612640549304977324
+    second: bussinessmanStanding_0
+  - first:
+      213: -5724338985487999033
+    second: bussinessmanStanding_1
+  - first:
+      213: 9141674783261055922
+    second: bussinessmanStanding_2
+  - first:
+      213: -3088447324016373933
+    second: bussinessmanStanding_3
+  - first:
+      213: 2096893500498191491
+    second: bussinessmanStanding_4
+  - first:
+      213: -6646945176512871485
+    second: bussinessmanStanding_5
+  - first:
+      213: 2547312232079163724
+    second: bussinessmanStanding_6
+  - first:
+      213: 3547960170388019014
+    second: bussinessmanStanding_7
+  - first:
+      213: -8473968469043549119
+    second: bussinessmanStanding_8
+  - first:
+      213: 3230954126538394796
+    second: bussinessmanStanding_9
+  - first:
+      213: -5762326657958613438
+    second: bussinessmanStanding_10
+  - first:
+      213: 2131968764671570253
+    second: bussinessmanStanding_11
+  - first:
+      213: 1581270023453731764
+    second: bussinessmanStanding_12
+  - first:
+      213: -4743251926280554668
+    second: bussinessmanStanding_13
+  - first:
+      213: -7700031176705895229
+    second: bussinessmanStanding_14
+  - first:
+      213: -6227316903243033515
+    second: bussinessmanStanding_15
+  - first:
+      213: -7510709240644970710
+    second: bussinessmanStanding_16
+  - first:
+      213: 7940509670831323122
+    second: bussinessmanStanding_17
+  - first:
+      213: -3648813449401026308
+    second: bussinessmanStanding_18
+  - first:
+      213: 2033292507190726873
+    second: bussinessmanStanding_19
+  - first:
+      213: -5711636175847193598
+    second: bussinessmanStanding_20
+  - first:
+      213: 4282559054384334620
+    second: bussinessmanStanding_21
+  - first:
+      213: -3098452532731681691
+    second: bussinessmanStanding_22
+  - first:
+      213: 772071528832128459
+    second: bussinessmanStanding_23
+  - first:
+      213: 5962466776959586131
+    second: bussinessmanStanding_24
+  - first:
+      213: -8274035333098323420
+    second: bussinessmanStanding_25
+  - first:
+      213: -5124591748686629302
+    second: bussinessmanStanding_26
+  - first:
+      213: -3154642115468360516
+    second: bussinessmanStanding_27
+  - first:
+      213: -8716127351268988529
+    second: bussinessmanStanding_28
+  - first:
+      213: -6832069491862523119
+    second: bussinessmanStanding_29
+  - first:
+      213: 6296624597448431193
+    second: bussinessmanStanding_30
+  - first:
+      213: -8629962260680663413
+    second: bussinessmanStanding_31
+  - first:
+      213: -4144468673228957294
+    second: bussinessmanStanding_32
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bussinessmanStanding_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 52
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1374dfeef79aa347b71e891e6995d42
+      internalID: -7612640549304977324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 52
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d102f9945b053884ab68f71175ed819a
+      internalID: -5724338985487999033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 52
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c276a6b4d8c80646b6ec1b5095a963c
+      internalID: 9141674783261055922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 52
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d026127720e3c48be9a570d9b9ec45
+      internalID: -3088447324016373933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_4
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 52
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54763849944d09e4e88bab99dff1a4d1
+      internalID: 2096893500498191491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_5
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 52
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49dcc473b301d4444abb92a2b5e57786
+      internalID: -6646945176512871485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_6
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 53
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c231b28fdf396e41b8a289ea2724e45
+      internalID: 2547312232079163724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 53
+        width: 24
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da588a61789245240892a928be3b2b45
+      internalID: 3547960170388019014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_8
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 53
+        width: 24
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b6ba7b67db90341bbd078199c3a6b0
+      internalID: -8473968469043549119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_9
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 53
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6929dad3e1e65f6418a6d4baa86b7afc
+      internalID: 3230954126538394796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_10
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 53
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b62614db6d82149a58fca03195fb36
+      internalID: -5762326657958613438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_11
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 53
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03485541a6c23a449c94656015d9915
+      internalID: 2131968764671570253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_12
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 53
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: babf1fbe6d5d5d244ac8e0ee1e3b0bb4
+      internalID: 1581270023453731764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_13
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 53
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54b1b6407f963048b1457e9c98f2ccd
+      internalID: -4743251926280554668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_14
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 53
+        width: 24
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36de801f13f987649b83204d2f96c20a
+      internalID: -7700031176705895229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_15
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 53
+        width: 24
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54416c3770907b45950a07bd0067bde
+      internalID: -6227316903243033515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_16
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 53
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3efb310b57ff484c84bcbb3887c1162
+      internalID: -7510709240644970710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_17
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 53
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a164e7a729cbc874eb454426ba195478
+      internalID: 7940509670831323122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_18
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 53
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a967de6a40c47b84eba49f81d11ef557
+      internalID: -3648813449401026308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_19
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 53
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1e9c52c27493d44baaffaa7f215d68
+      internalID: 2033292507190726873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_20
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 53
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6de3c216a1b50c4494fea322f657478
+      internalID: -5711636175847193598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_21
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 53
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ca9531545d5674fa4a4e05a12c06c7
+      internalID: 4282559054384334620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_22
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 3
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc9f40985354504b8364657c61a806d
+      internalID: -3098452532731681691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_23
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 3
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76642a198a5e384f87bcfe273a28b17
+      internalID: 772071528832128459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_24
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 3
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd4d9107d7dff140b861a3f72c90063
+      internalID: 5962466776959586131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_25
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 3
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f6bc31cc279c74db0cc06e7f5a0177
+      internalID: -8274035333098323420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_26
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 3
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74c09b4ffcef5f43a28db522955308d
+      internalID: -5124591748686629302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_27
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 3
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d501f226f8b003a4f948588819ec9113
+      internalID: -3154642115468360516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_28
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 3
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e657f63e1b2ba4c863117336cc3916
+      internalID: -8716127351268988529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 3
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5b5649b1a9cc149b7bdb7ef0c50ebf
+      internalID: -6832069491862523119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_30
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 3
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f478b2284686293418ec851682312caf
+      internalID: 6296624597448431193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_31
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 3
+        width: 19
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c9e7ce3b838f14586028dc880d0b82
+      internalID: -8629962260680663413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bussinessmanStanding_32
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 16
+        width: 58
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ef4e33c1717c74a813d923c141f9c7
+      internalID: -4144468673228957294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 42c5ce89af1012647a72c69769c84e1d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
