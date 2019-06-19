@@ -11,7 +11,7 @@ public class StateMachine : MonoBehaviour
             get {return Enabled ;}
             set {Enabled = value;}
         }
-        string StateName {get ; set ;} = "Empty state"
+        string StateName {get ; set ;} = "Empty state";
         public string stateName {
             get {return StateName ;}
             set {StateName = value ;}
@@ -47,7 +47,7 @@ public class StateMachine : MonoBehaviour
             if (states[_state].stateName == newState) {
                 states[_state].enabled = true;                
             }
-            
+
             
             
         }
