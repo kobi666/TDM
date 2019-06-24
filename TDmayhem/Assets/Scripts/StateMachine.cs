@@ -26,6 +26,8 @@ public class StateMachine : MonoBehaviour
 
     
     private state[] states ;
+
+    
     
 
     public void AddStates(string[] _stateNames) {
@@ -45,20 +47,37 @@ public class StateMachine : MonoBehaviour
     public void setState(string newState) {
         for (int _state = 0 ; _state == states.Length ; _state++) {
             if (states[_state].stateName == newState) {
-                states[_state].enabled = true;                
-            }
-
-            
-            
+                states[_state].enabled = true;
+                for (int __state = 0 ; __state == states.Length ; __state++) {
+                    if (states[__state].stateName != newState) {
+                        states[__state].enabled = false;
+                    }
+                }
+            }    
         }
     }
+
+    public IEnumerator StartTransition(string _newState) {
+        yield return StartCoroutine(transitionToNextState());
+        setState(_newState);
+    }
+
+    
+
+    
+
+    
 
     
 
 
     public virtual void inStateFunctions () { Debug.Log("Empty virtual function called"); }
 
-    public virtual void transitionToNextState() {Debug.Log("Empty virtual function called");}
+    public virtual IEnumerator transitionToNextState() {
+        Debug.Log("Empty virtual function called");
+        yield return null;
+        }
+        
 
        
     
