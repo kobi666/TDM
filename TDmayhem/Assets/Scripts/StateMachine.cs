@@ -25,12 +25,13 @@ public class StateMachine : MonoBehaviour
         
     }
 
-    
+    private bool runtimeStateLock;
     public state[] states;
 
     private state currentState;
 
     public state CurrentState { get => currentState; set => currentState = value; }
+    public bool RuntimeStateLock { get => runtimeStateLock; set => runtimeStateLock = value; }
 
     public void AddStates(string[] _stateNames) {
         
@@ -60,21 +61,23 @@ public class StateMachine : MonoBehaviour
             }    
         }
     }
-    private IEnumerator StartTransitionCoroutine() {
-        virtualTransitionFunction();
+    private IEnumerator StartTransitionCoroutineCapsule(string _newState) {
+        runtimeStateLock = true;
+        virtualTransitionFunction(_newState);
         yield return null;
     }
 
     public IEnumerator StartTransitionToNextState(string _newState) {
-        yield return StartCoroutine(StartTransitionCoroutine());
+        yield return StartCoroutine(StartTransitionCoroutineCapsule(_newState));
         setState(_newState);
         Debug.Log("state changed to " + _newState + " for " + this.gameObject.name);
+        runtimeStateLock = false;
     }
 
     // Write function for each state in the states array for both InStateFunctions and virtualTranstionFunction!!
     public virtual void virtualInStateFunctions () { Debug.Log("Empty virtual function called"); }
 
-    public virtual void virtualTransitionFunction() 
+    public virtual void virtualTransitionFunction(string _newState) 
     {
         Debug.Log("Empty virtual function called"); 
     }

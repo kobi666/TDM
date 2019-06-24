@@ -23,18 +23,34 @@ public class BasicEnemyUnitController : StateMachine
             if (CS == "InBattle") {
 
             }
+            if (CS == "WaitForBattle") {
+
+            }
         }
 
-        public override void virtualTransitionFunction() 
+        public override void virtualTransitionFunction(string _newState) 
         {
+            string CachedState = CurrentState.stateName;
+            if (_newState == "Walking") {
 
+            }
+            if (_newState == "Dead") {
+
+            }
+            if (_newState == "InBattle") {
+
+            }
+            if (_newState == "WaitForBattle") {
+                
+            }
         }
 
 
         private void Awake() 
         {
-            WalkerOBJ = gameObject.GetComponent<BezierSolution.EnemyWalker2D>();
             setState("Walking");
+            WalkerOBJ = gameObject.GetComponent<BezierSolution.EnemyWalker2D>();
+            gameUnit = gameObject.GetComponent<GameUnit>();
         }
         
 
@@ -54,7 +70,6 @@ public class BasicEnemyUnitController : StateMachine
         // Start is called before the first frame update
         void Start()
         {
-            gameUnit = gameObject.GetComponent<GameUnit>();
             
             
         }
@@ -63,6 +78,8 @@ public class BasicEnemyUnitController : StateMachine
         void Update()
         {
             HorizontalFlipper(gameObject.GetComponent<BezierSolution.EnemyWalker2D>().Hdirection);
-            
+            if (!RuntimeStateLock) {
+                virtualInStateFunctions();
+            }
         }
 }
