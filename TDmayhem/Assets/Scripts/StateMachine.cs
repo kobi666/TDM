@@ -46,7 +46,7 @@ public class StateMachine : MonoBehaviour
     
     }
 
-    void setState(string newState) {
+    public void setState(string newState) {
         for (int _state = 0 ; _state == states.Length ; _state++) {
             if (states[_state].stateName == newState) {
                 states[_state].enabled = true;

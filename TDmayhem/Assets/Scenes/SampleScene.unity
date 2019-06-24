@@ -375,17 +375,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 196870394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd8659c83c82d1045ad8392d19af7623, type: 3}
+  m_Script: {fileID: 11500000, guid: f118983e947793b488a789bed2e1b0f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkerOBJ: {fileID: 0}
-  stateStrings:
-  - Walking
-  - WaitForBattle
-  - Dead
-  - InBattle
-  - Spawning
-  - Shooting
 --- !u!1 &222222032
 GameObject:
   m_ObjectHideFlags: 0
