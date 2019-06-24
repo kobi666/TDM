@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
+    
     public class state {
         bool Enabled = false;
 
@@ -25,10 +26,11 @@ public class StateMachine : MonoBehaviour
     }
 
     
-    private state[] states ;
+    public state[] states;
 
-    
-    
+    private state currentState;
+
+    public state CurrentState { get => currentState; set => currentState = value; }
 
     public void AddStates(string[] _stateNames) {
         
@@ -44,39 +46,38 @@ public class StateMachine : MonoBehaviour
     
     }
 
-    public void setState(string newState) {
+    void setState(string newState) {
         for (int _state = 0 ; _state == states.Length ; _state++) {
             if (states[_state].stateName == newState) {
                 states[_state].enabled = true;
+                CurrentState = states[_state];
                 for (int __state = 0 ; __state == states.Length ; __state++) {
                     if (states[__state].stateName != newState) {
                         states[__state].enabled = false;
                     }
+                
                 }
             }    
         }
     }
-
-    public IEnumerator StartTransition(string _newState) {
-        yield return StartCoroutine(transitionToNextState());
-        setState(_newState);
+    private IEnumerator StartTransitionCoroutine() {
+        virtualTransitionFunction();
+        yield return null;
     }
 
-    
+    public IEnumerator StartTransitionToNextState(string _newState) {
+        yield return StartCoroutine(StartTransitionCoroutine());
+        setState(_newState);
+        Debug.Log("state changed to " + _newState + " for " + this.gameObject.name);
+    }
 
-    
+    // Write function for each state in the states array for both InStateFunctions and virtualTranstionFunction!!
+    public virtual void virtualInStateFunctions () { Debug.Log("Empty virtual function called"); }
 
-    
-
-    
-
-
-    public virtual void inStateFunctions () { Debug.Log("Empty virtual function called"); }
-
-    public virtual IEnumerator transitionToNextState() {
-        Debug.Log("Empty virtual function called");
-        yield return null;
-        }
+    public virtual void virtualTransitionFunction() 
+    {
+        Debug.Log("Empty virtual function called"); 
+    }
         
 
        

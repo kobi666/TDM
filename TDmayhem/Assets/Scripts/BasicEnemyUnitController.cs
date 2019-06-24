@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : StateMachine
+public class BasicEnemyUnitController : StateMachine
 {
-  
+                
                 private BezierSolution.EnemyWalker2D WalkerOBJ;
                 string[] stateStrings = {"Walking", "WaitForBattle", "Dead", "InBattle", "Spawning", "Shooting"};
                 
                 public GameUnit gameUnit;
-                
-                
-                
+            
                 
 
 

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,17 +32,6 @@ public class GameUnitObject : MonoBehaviour
     }
 
 
-
-
-    void DestroyObjectOnLifeloss()
-    {
-        if (LifePoints <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-
     void Start()
     {
         if (gameObject.tag == "Enemy")
@@ -64,6 +53,5 @@ public class GameUnitObject : MonoBehaviour
             FlipAnimationAgent();
         }
 
-        DestroyObjectOnLifeloss();
     }
 }

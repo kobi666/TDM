@@ -8,8 +8,9 @@ namespace BezierSolution
 	public class EnemyWalker2D : MonoBehaviour
 	{
         public enum TravelMode { Once, Loop, PingPong };
-        public bool InStopEvent = false;
-		private Transform cachedTransform;
+        private bool inStopEvent = false;
+        public bool InStopEvent { get => inStopEvent; set => inStopEvent = value; }
+        private Transform cachedTransform;
         public float SplineLength;
         public float ProximityToEndOfSpline;
 
@@ -29,7 +30,9 @@ namespace BezierSolution
 			set { progress = value; }
 		}
 
-		[Range( 0f, 0.06f )]
+        
+
+        [Range( 0f, 0.06f )]
 		public float relaxationAtEndPoints = 0.01f;
 
 		//public float movementLerpModifier = 10f;

@@ -34,7 +34,7 @@ public class ProjectileController : MonoBehaviour
     {
         if (collision.gameObject == Target)
         {
-            Target.GetComponent<GameUnitObject>().LifePoints -= Random.Range(DamageRange[0], DamageRange[1]);
+            //Target.GetComponent<GameUnitObject>().LifePoints -= Random.Range(DamageRange[0], DamageRange[1]);
             Destroy(gameObject);
         }
     }
