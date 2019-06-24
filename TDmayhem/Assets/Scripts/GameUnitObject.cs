@@ -1,11 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameUnitObject : MonoBehaviour
 {
     private BezierSolution.EnemyWalker2D WalkerOBJ;
-    public int LifePoints;
     public bool isEnemy { get; set; }
     public bool DamageToPlayerOnContact { get; set; }
     public float speed;
