@@ -19,8 +19,6 @@ public class StateMachineV2 : MonoBehaviour
 
     public StateV2 NewState = new StateV2();
     public StateV2 OldState = new StateV2();
-
-
     public StateV2 _currentState = new StateV2();
 
     public delegate void DelegateCurrentBehavior();
