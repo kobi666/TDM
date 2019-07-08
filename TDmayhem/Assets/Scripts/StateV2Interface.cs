@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicPlayerMilitiaController : StateMachineV2
+public class StateV2Interface : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

@@ -5,10 +5,14 @@ using UnityEngine;
 public class StateMachineV2 : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Dictionary<string, StateV2> states;
+
+    
+
     public bool StopDoingThingsWhileTransitioningToNewState = false;
     public class StateV2{
 
-        public string _name = "EMPTY CLASS";
+        public string _name = "EMPTY STATE";
 
         public virtual void OngoingFunctions() { Debug.Log("EMPTY ONGOING Function called");}
 
@@ -16,6 +20,13 @@ public class StateMachineV2 : MonoBehaviour
 
         public virtual IEnumerator OnStateExitFunctions() {Debug.Log("EMPTY EXIT state routine called") ; yield return null;}
     }
+
+
+    
+
+    
+
+
 
     public StateV2 NewState = new StateV2();
     public StateV2 OldState = new StateV2();
