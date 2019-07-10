@@ -40,6 +40,9 @@ public class StateMachineV3 : MonoBehaviour
         }
     }
 
+
+    
+
     string NextState {
         get {
             return NextState;
@@ -66,30 +69,21 @@ public class StateMachineV3 : MonoBehaviour
     public delegate IEnumerator ExitStateFunctions();
     ExitStateFunctions _ExitStateFunctions;
 
-
-    
-
-
-
-
-    
-
     public IEnumerator StartChangeStateSequence() {
         yield return StartCoroutine(_ExitStateFunctions());
         yield return StartCoroutine(_EnterStateFunctions());
         StopDoingThingsWhileTransitioningToNewState = false;
     }
 
+    void OnStateChangeFunctionSwitcher() {
+
+    }
+
+    void SetInitialState() {
+
+    }
+
     
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

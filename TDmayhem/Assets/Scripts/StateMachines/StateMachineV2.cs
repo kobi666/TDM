@@ -7,25 +7,39 @@ public class StateMachineV2 : MonoBehaviour
     // Start is called before the first frame update
     public Dictionary<string, StateV2> states;
 
-    
+    [System.Serializable]
+    public  class StateObjectsContainer {
 
-    public bool StopDoingThingsWhileTransitioningToNewState = false;
-    public class StateV2{
+    }
+
+    public StateObjectsContainer ObjectsContainer;
+
+    public bool StopDoingThingsWhileTransitioningToNewState {
+        get {return StopDoingThingsWhileTransitioningToNewState;}
+        set {
+            StopDoingThingsWhileTransitioningToNewState = value;
+        }
+        
+    }
+
+    /* public class StateV2{
 
         public string _name = "EMPTY STATE";
 
-        public virtual void OngoingFunctions() { Debug.Log("EMPTY ONGOING Function called");}
+        public virtual void OngoingFunctions(StateObjectsContainer container) { Debug.Log("EMPTY ONGOING Function called");}
+        
+        public virtual IEnumerator OnStateEnterFunctions(StateObjectsContainer container) {Debug.Log("EMPTY ENTER state routine called") ;  yield return null;}
 
-        public virtual IEnumerator OnStateEnterFunctions() {Debug.Log("EMPTY ENTER state routine called") ;  yield return null;}
-
-        public virtual IEnumerator OnStateExitFunctions() {Debug.Log("EMPTY EXIT state routine called") ; yield return null;}
-    }
-
-
-    
+        public virtual IEnumerator OnStateExitFunctions(StateObjectsContainer container) {Debug.Log("EMPTY EXIT state routine called") ; yield return null;}
+    } */
 
     
 
+    public delegate void Ontrigger2D_DelegateFunction();
+    Ontrigger2D_DelegateFunction OnTriggerStay2d_delegate;
+    Ontrigger2D_DelegateFunction OnTriggerEnter2d_delegate;
+    Ontrigger2D_DelegateFunction OnTriggerExit2d_delegate;
+    
 
 
     public StateV2 NewState = new StateV2();
@@ -35,20 +49,20 @@ public class StateMachineV2 : MonoBehaviour
     public delegate void DelegateCurrentBehavior();
     DelegateCurrentBehavior _delegateCurrentBehavior;
 
-    public delegate IEnumerator DoStuffWhenEnteringToNewState();
-    public delegate IEnumerator DoStuffWhenExitingFromOldState();
-    public delegate void DoStuffForTheCurrentState();
+    public delegate IEnumerator DoStuffWhenEnteringToNewState(StateObjectsContainer container);
+    public delegate IEnumerator DoStuffWhenExitingFromOldState(StateObjectsContainer container);
+    public delegate void DoStuffForTheCurrentState(StateObjectsContainer container);
 
     DoStuffForTheCurrentState _doStuffForCurrentState;
     DoStuffWhenEnteringToNewState _doStuffWhenEnteringToNewState;
     DoStuffWhenExitingFromOldState _doStuffWhenExitingFromOldState;
 
     public IEnumerator StartExitFromOldStateSequence() {
-        yield return StartCoroutine(_doStuffWhenExitingFromOldState());
+        yield return StartCoroutine(_doStuffWhenExitingFromOldState(ObjectsContainer));
     }
 
     public IEnumerator StartEnteringToNewStateSequence() {
-        yield return StartCoroutine(_doStuffWhenEnteringToNewState());
+        yield return StartCoroutine(_doStuffWhenEnteringToNewState(ObjectsContainer));
     }
 
     
@@ -75,7 +89,7 @@ public class StateMachineV2 : MonoBehaviour
     public void StateFunctionsExecutor() {
         
         if (StopDoingThingsWhileTransitioningToNewState == false) {
-            _doStuffForCurrentState();
+            _doStuffForCurrentState(ObjectsContainer);
         }
         
     }
@@ -96,6 +110,9 @@ public class StateMachineV2 : MonoBehaviour
         //Debug.Log("Started changing states sequence");
         StartCoroutine(StartChnagingStatesSequence());
     }
+    
+
+    
 
      
 
