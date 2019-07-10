@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateMachineV2 : MonoBehaviour
+public class PlayerUnitStateMachine : MonoBehaviour
 {
     // Start is called before the first frame update
     public Dictionary<string, StateV2> states;
@@ -44,16 +44,16 @@ public class StateMachineV2 : MonoBehaviour
 
     
 
-    public delegate void Ontrigger2D_DelegateFunction();
-    Ontrigger2D_DelegateFunction OnTriggerStay2d_delegate;
-    Ontrigger2D_DelegateFunction OnTriggerEnter2d_delegate;
-    Ontrigger2D_DelegateFunction OnTriggerExit2d_delegate;
+    public delegate void Ontrigger2D_DelegateFunction(PlayerUnitStateMachine.StateObjectsContainer container);
+    public Ontrigger2D_DelegateFunction _OnTriggerStay2d_delegate;
+    Ontrigger2D_DelegateFunction _OnTriggerEnter2d_delegate;
+    Ontrigger2D_DelegateFunction _OnTriggerExit2d_delegate;
     
 
 
-    public StateV2 NewState = new StateV2("DeafultNewState");
-    public StateV2 OldState = new StateV2("DefaultOldState");
-    public StateV2 _currentState = new StateV2("DefaultCurrentState");
+    public StateV2 NewState = new StateV2();
+    public StateV2 OldState = new StateV2();
+    public StateV2 _currentState = new StateV2();
 
     public delegate void DelegateCurrentBehavior();
     DelegateCurrentBehavior _delegateCurrentBehavior;
@@ -111,6 +111,7 @@ public class StateMachineV2 : MonoBehaviour
         _doStuffWhenExitingFromOldState = OldState.OnStateExitFunctions;
         _doStuffWhenEnteringToNewState = _currentState.OnStateEnterFunctions;
         _doStuffForCurrentState = _currentState.OngoingFunctions;
+        _OnTriggerStay2d_delegate = _currentState.OnTriggerStay2dFunctions;
         StartCoroutine(StartChnagingStatesSequence());
         }
     }
