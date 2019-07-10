@@ -8,10 +8,19 @@ public class StateMachineV2 : MonoBehaviour
     public Dictionary<string, StateV2> states;
 
     [System.Serializable]
-    public  class StateObjectsContainer {
-
+    public class StateObjectsContainer {
+        public GameObject enemyTarget;
+        public float damage;
+        public float attackRate;
+        public Vector2 cachedPosition;
+        public float speed;
+        public float rightSpriteBoundSize;
+        public float enemyBottomSpriteBoundSize;
+        public Bounds targetEnemyColliderBounds;
+        public GameObject UnitRectCollider;
+        public Bounds selfColliderBounds;
     }
-
+    
     public StateObjectsContainer ObjectsContainer;
 
     public bool StopDoingThingsWhileTransitioningToNewState {
@@ -42,9 +51,9 @@ public class StateMachineV2 : MonoBehaviour
     
 
 
-    public StateV2 NewState = new StateV2();
-    public StateV2 OldState = new StateV2();
-    public StateV2 _currentState = new StateV2();
+    public StateV2 NewState = new StateV2("DeafultNewState");
+    public StateV2 OldState = new StateV2("DefaultOldState");
+    public StateV2 _currentState = new StateV2("DefaultCurrentState");
 
     public delegate void DelegateCurrentBehavior();
     DelegateCurrentBehavior _delegateCurrentBehavior;
