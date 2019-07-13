@@ -16,12 +16,15 @@ public class GameUnit
     bool unitIsPlayerUnit;
     bool unitIsBoss;
     bool unitIsHidden;
-    bool unitIsTargetable() {
+    public bool unitIsTargetable() {
         if (UnitIsBoss == true || UnitIsEnemy == true) {
             if (UnitIsPlayerUnit != true) {
-                if (unitIsHidden != )
+                if (unitIsHidden != true ) {
+                    return true;
+                }
             }
         }
+        return false;
     }
 
     public int UnitMeleeDamage { get => unitMeleeDamage; set => unitMeleeDamage = value; }
@@ -36,5 +39,5 @@ public class GameUnit
     public bool UnitIsPlayerUnit { get => unitIsPlayerUnit; set => unitIsPlayerUnit = value; }
     public bool UnitIsBoss { get => unitIsBoss; set => unitIsBoss = value; }
     public bool UnitIsHidden { get => unitIsHidden; set => unitIsHidden = value; }
-    public bool UnitIsTargetable { get => unitIsTargetable; set => unitIsTargetable = value; }
+    
 }

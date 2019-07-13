@@ -5,10 +5,13 @@ using UnityEngine;
 public class PlayerUnitStateMachine : MonoBehaviour
 {
     // Start is called before the first frame update
+    
     public Dictionary<string, StateV2> states;
 
     [System.Serializable]
-    public class StateObjectsContainer {
+    public class UnitDataStructure {
+
+        public string SelfGUID;
         public GameObject enemyTarget;
         public float damage;
         public float attackRate;
@@ -21,7 +24,7 @@ public class PlayerUnitStateMachine : MonoBehaviour
         public Bounds selfColliderBounds;
     }
     
-    public StateObjectsContainer ObjectsContainer;
+    public UnitDataStructure UnitData;
 
     public bool StopDoingThingsWhileTransitioningToNewState {
         get {return StopDoingThingsWhileTransitioningToNewState;}
@@ -44,34 +47,34 @@ public class PlayerUnitStateMachine : MonoBehaviour
 
     
 
-    public delegate void Ontrigger2D_DelegateFunction(PlayerUnitStateMachine.StateObjectsContainer container);
+    public delegate void Ontrigger2D_DelegateFunction(PlayerUnitStateMachine.UnitDataStructure container, UnityEngine.Collider collision);
     public Ontrigger2D_DelegateFunction _OnTriggerStay2d_delegate;
     Ontrigger2D_DelegateFunction _OnTriggerEnter2d_delegate;
     Ontrigger2D_DelegateFunction _OnTriggerExit2d_delegate;
     
 
 
-    public StateV2 NewState = new StateV2();
-    public StateV2 OldState = new StateV2();
-    public StateV2 _currentState = new StateV2();
+    public StateV2 NewState;
+    public StateV2 OldState;
+    public StateV2 _currentState;
 
     public delegate void DelegateCurrentBehavior();
     DelegateCurrentBehavior _delegateCurrentBehavior;
 
-    public delegate IEnumerator DoStuffWhenEnteringToNewState(StateObjectsContainer container);
-    public delegate IEnumerator DoStuffWhenExitingFromOldState(StateObjectsContainer container);
-    public delegate void DoStuffForTheCurrentState(StateObjectsContainer container);
+    public delegate IEnumerator DoStuffWhenEnteringToNewState(UnitDataStructure container);
+    public delegate IEnumerator DoStuffWhenExitingFromOldState(UnitDataStructure container);
+    public delegate void DoStuffForTheCurrentState(UnitDataStructure container);
 
     DoStuffForTheCurrentState _doStuffForCurrentState;
     DoStuffWhenEnteringToNewState _doStuffWhenEnteringToNewState;
     DoStuffWhenExitingFromOldState _doStuffWhenExitingFromOldState;
 
     public IEnumerator StartExitFromOldStateSequence() {
-        yield return StartCoroutine(_doStuffWhenExitingFromOldState(ObjectsContainer));
+        yield return StartCoroutine(_doStuffWhenExitingFromOldState(UnitData));
     }
 
     public IEnumerator StartEnteringToNewStateSequence() {
-        yield return StartCoroutine(_doStuffWhenEnteringToNewState(ObjectsContainer));
+        yield return StartCoroutine(_doStuffWhenEnteringToNewState(UnitData));
     }
 
     
@@ -90,7 +93,9 @@ public class PlayerUnitStateMachine : MonoBehaviour
             }
 
 
-
+    private void Awake() {
+        
+    }
 
 
 
@@ -98,7 +103,7 @@ public class PlayerUnitStateMachine : MonoBehaviour
     public void StateFunctionsExecutor() {
         
         if (StopDoingThingsWhileTransitioningToNewState == false) {
-            _doStuffForCurrentState(ObjectsContainer);
+            _doStuffForCurrentState(UnitData);
         }
         
     }
