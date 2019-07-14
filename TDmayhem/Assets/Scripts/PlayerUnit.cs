@@ -12,8 +12,10 @@ public class PlayerUnit : MonoBehaviour
     public float RightSpriteBoundSize;
     public float EnemyBottomSpriteBoundSize;
     public Bounds TargetEnemyColliderBounds;
-    GameObject UnitRectCollider;
-    public Bounds SelfColliderBounds;
+    GameObject SelfUnitRectCollider;
+    public Bounds SelfColliderBounds;/* (GameObject) {
+
+    } */
 
     
     
@@ -55,8 +57,8 @@ public class PlayerUnit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UnitRectCollider = transform.Find("UnitRectBox").gameObject;
-        SelfColliderBounds = UnitRectCollider.GetComponent<BoxCollider2D>().bounds;
+        SelfUnitRectCollider = transform.Find("UnitRectBox").gameObject;
+        SelfColliderBounds = SelfUnitRectCollider.GetComponent<BoxCollider2D>().bounds;
         //Debug.Log("Unit Max vector 2 collider : " + gameObject.GetComponent<Collider2D>().bounds.max.x + " , "  + gameObject.GetComponent<Collider2D>().bounds.max.y);
         //Debug.Log("Unit Min vector 2 collider : " + gameObject.GetComponent<Collider2D>().bounds.min.x + " , " + gameObject.GetComponent<Collider2D>().bounds.min.y);
         RightSpriteBoundSize = GetComponent<SpriteRenderer>().bounds.max.x - GetComponent<SpriteRenderer>().bounds.center.x; 

@@ -47,7 +47,7 @@ public class BasicPlayerMilitiaController : PlayerUnitStateMachine
     }
 
     private void Awake() {
-        UnitData.SelfGUID = Utils.RandomString(GlobalParameters.Params.Global_GUID_length);
+        //UnitData.SelfGUID = Utils.RandomString(UnitData.SelfGUID);
     }
 
     void Start()

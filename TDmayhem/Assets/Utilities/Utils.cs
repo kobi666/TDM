@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Utils : MonoBehaviour
 {
+    public
+
     public int GlobalGUID_Length = 5;
 
     //public static Utils Instance;
@@ -67,14 +69,25 @@ public class Utils : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, EnemyLeftColliderBounds, Time.deltaTime * speed);
     }
 
-    public void RandomString(int StringLength) {
+    public void RandomString(string GUID) {
+        const string chars =  "0123456789abcdefghijklmnopqrstuvwxABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        GUID = "";
+        for (int i = 0 ; i >= GlobalGUID_Length ; i++) {
+            int r = Random.Range(0, chars.Length);
+            GUID += chars[r];
+        }
+        
+    } 
+
+    /* public string RandomString(int StringLength) {
         const string chars =  "0123456789abcdefghijklmnopqrstuvwxABCDEFGHIJKLMNOPQRSTUVWXYZ";
         string result = "";
         for (int i = 0 ; i >= StringLength ; i++) {
             int r = Random.Range(0, chars.Length);
             result += chars[r];
         }
-    }
+        return result;
+    } */
 
     
 }
