@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Utils : MonoBehaviour
+public class UnitUtils : MonoBehaviour
 {
-    public
+    
 
     public int GlobalGUID_Length = 5;
 
@@ -62,12 +62,42 @@ public class Utils : MonoBehaviour
         TargetEnemy.GetComponent<BezierSolution.EnemyWalker2D>().InStopEvent = true;
     }
 
-    void moveToEnemy (GameObject TargetEnemy, Vector2 TargetEnemyColliderBounds)
+    /* void moveToEnemy (GameObject TargetEnemy, Vector2 TargetEnemyColliderBounds)
     {
         Vector2 EnemyLeftColliderBounds;
         EnemyLeftColliderBounds = new Vector2(TargetEnemyColliderBounds.min.x - (SelfColliderBounds.max.x - SelfColliderBounds.center.x), TargetEnemyColliderBounds.min.y + (SelfColliderBounds.center.y - SelfColliderBounds.min.y));
         transform.position = Vector2.MoveTowards(transform.position, EnemyLeftColliderBounds, Time.deltaTime * speed);
+    } */
+    /* public void FindRectangleBox() {
+        transform.Find("UnitRectBox").GetComponent<SpriteRectangleColliderData>();
+    } */
+
+    public static SpriteRectangleColliderData GetSpriteColliderData (GameObject GO) {
+        SpriteRectangleColliderData SpriteColliderData;
+        return SpriteColliderData = GO.transform.Find("UnitRectBox").GetComponent<SpriteRectangleColliderData>();
     }
+
+    public static Vector2 LeftOfEnemyPositionRelativeToSelfSpriteColliderSize(SpriteRectangleColliderData SelfSpriteCollider, GameObject TargetGO) {
+
+        Bounds EnemyBounds = TargetGO.GetComponent<Collider2D>().bounds;
+        Bounds SelfBounds = SelfSpriteCollider.GetRectBoxColliderBounds;
+        Vector2 Position = new Vector2(EnemyBounds.min.x - (SelfBounds.max.x - SelfBounds.center.x), EnemyBounds.min.y + (SelfBounds.center.y - SelfBounds.min.y));        
+        return Position;
+    }
+
+    public static bool ComparePositionToVector2 (Transform _transform, Vector2 _vector2) {
+        if (_transform.position.x == _vector2.x && _transform.position.y == _vector2.y) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    public static void MoveUnitToLeftSideOfEnemy(SpriteRectangleColliderData SelfSpriteCollider, GameObject EnemyGO, GameObject ThisGO, float speed) {
+        ThisGO.transform.position = Vector2.MoveTowards(ThisGO.transform.position, UnitUtils.LeftOfEnemyPositionRelativeToSelfSpriteColliderSize(SelfSpriteCollider, EnemyGO) , Time.deltaTime * speed);
+    }
+
 
     public void RandomString(string GUID) {
         const string chars =  "0123456789abcdefghijklmnopqrstuvwxABCDEFGHIJKLMNOPQRSTUVWXYZ";

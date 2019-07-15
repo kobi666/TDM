@@ -32,8 +32,5 @@ public class SpriteRectangleColliderData : MonoBehaviour
             return _bounds = _UnitRectbox.GetComponent<BoxCollider2D>().bounds;
         } */
 
-    void Start()
-    {
-        
-    }
+    
 }

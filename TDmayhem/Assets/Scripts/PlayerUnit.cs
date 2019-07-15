@@ -75,6 +75,6 @@ public class PlayerUnit : MonoBehaviour
             moveToEnemy(EnemyTarget);
         }
 
-        Utils.PrintSomething("asasdasd");
+        UnitUtils.PrintSomething("asasdasd");
     }
 }

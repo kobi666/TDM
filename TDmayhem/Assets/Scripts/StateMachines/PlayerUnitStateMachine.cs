@@ -10,9 +10,8 @@ public class PlayerUnitStateMachine : MonoBehaviour
 
     [System.Serializable]
     public class UnitDataStructure {
-
         public string SelfGUID;
-        public SpriteRectangleColliderData SpriteCollider;
+        public SpriteRectangleColliderData SelfSpriteCollider;
         public GameObject SelfUnitRectangleBox;
         public GameObject enemyTarget;
         public float damage;
@@ -22,16 +21,7 @@ public class PlayerUnitStateMachine : MonoBehaviour
         public float rightSpriteBoundSize;
         public float enemyBottomSpriteBoundSize;
         public Bounds targetEnemyColliderBounds;
-        /* public Collider2D UnitRectCollider(GameObject GO) {
         
-        Collider2D _collider2d;
-        _collider2d = GO.transform.Find("UnitRectBox").GetComponent<BoxCollider2D>();
-        return _collider2d = GO.transform.Find("UnitRectBox").GetComponent<BoxCollider2D>();
-        }
-        public Bounds selfColliderBounds(Collider2D _UnitRectbox) {
-            Bounds _bounds;
-            return _bounds = _UnitRectbox.GetComponent<BoxCollider2D>().bounds;
-        } */
     }
     
     public UnitDataStructure UnitData;

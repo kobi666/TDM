@@ -101,7 +101,7 @@ public class WeaponController : MonoBehaviour
     {
         if(FireRateTimer <= 0)
         { 
-        Target = Utils.FindObjectNearestToEndToEndOfSpline(gameObject, "Units");
+        Target = UnitUtils.FindObjectNearestToEndToEndOfSpline(gameObject, "Units");
         }
 
         if (Target && FireRateTimer <= 0)

@@ -28,21 +28,39 @@ public class BasicPlayerMilitiaController : PlayerUnitStateMachine
 
     }
 
+
+
+
     class MovingToEnemy : StateV2 {
-        
-    }
+        public override void OngoingFunctions(UnitDataStructure container) {
+            if (UnitUtils.ComparePositionToVector2(this.gameObject.transform, UnitUtils.LeftOfEnemyPositionRelativeToSelfSpriteColliderSize(container.SelfSpriteCollider, container.enemyTarget)) == false) {
+                UnitUtils.MoveUnitToLeftSideOfEnemy(container.SelfSpriteCollider, container.enemyTarget, this.gameObject, container.speed);
+            }
+            
+        }
+
+
+        //continue this
+
+        public override IEnumerator OnStateEnterFunctions(UnitDataStructure container) {
+            yield return null;
+        }
+    }   
+
+    
+    
     
 
     void OnTriggerEnter2d(Collider other) {
         //_OnTriggerStay2d_delegate(ObjectsContainer, other);
         if (other.gameObject.GetComponent<GameUnit>().unitIsTargetable() == true) {
-            UnitData.enemyTarget = Utils.FindObjectNearestToEndToEndOfSpline(gameObject, "Units");
+            UnitData.enemyTarget = UnitUtils.FindObjectNearestToEndToEndOfSpline(gameObject, "Units");
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.GetComponent<GameUnit>().unitIsTargetable() == true) {
-            UnitData.enemyTarget = Utils.FindObjectNearestToEndToEndOfSpline(gameObject, "Units");
+            UnitData.enemyTarget = UnitUtils.FindObjectNearestToEndToEndOfSpline(gameObject, "Units");
         }
     }
 
@@ -52,7 +70,8 @@ public class BasicPlayerMilitiaController : PlayerUnitStateMachine
 
     void Start()
     {
-        
+        UnitData.cachedPosition = transform.position;
+        UnitData.SelfSpriteCollider = UnitUtils.GetSpriteColliderData(this.gameObject);
     }
 
     // Update is called once per frame
