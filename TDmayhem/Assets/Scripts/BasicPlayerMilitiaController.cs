@@ -34,7 +34,7 @@ public class BasicPlayerMilitiaController : PlayerUnitStateMachine
     class MovingToEnemy : StateV2 {
         public override void OngoingFunctions(UnitDataStructure container) {
             if (UnitUtils.ComparePositionToVector2(this.gameObject.transform, UnitUtils.LeftOfEnemyPositionRelativeToSelfSpriteColliderSize(container.SelfSpriteCollider, container.enemyTarget)) == false) {
-                UnitUtils.MoveUnitToLeftSideOfEnemy(container.SelfSpriteCollider, container.enemyTarget, this.gameObject, container.speed);
+                UnitUtils.MoveUnitToBottomLeftSideOfEnemy(container.SelfSpriteCollider, container.enemyTarget, this.gameObject, container.speed);
             }
             
         }
@@ -43,8 +43,12 @@ public class BasicPlayerMilitiaController : PlayerUnitStateMachine
         //continue this
 
         public override IEnumerator OnStateEnterFunctions(UnitDataStructure container) {
+            container.enemyTarget.GetComponent<BezierSolution.EnemyWalker2D>().InStopEvent = true;
+            container.cachedPosition = this.gameObject.transform.position;
             yield return null;
         }
+
+        
     }   
 
     

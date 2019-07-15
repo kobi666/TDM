@@ -94,7 +94,7 @@ public class UnitUtils : MonoBehaviour
         }
     }
 
-    public static void MoveUnitToLeftSideOfEnemy(SpriteRectangleColliderData SelfSpriteCollider, GameObject EnemyGO, GameObject ThisGO, float speed) {
+    public static void MoveUnitToBottomLeftSideOfEnemy(SpriteRectangleColliderData SelfSpriteCollider, GameObject EnemyGO, GameObject ThisGO, float speed) {
         ThisGO.transform.position = Vector2.MoveTowards(ThisGO.transform.position, UnitUtils.LeftOfEnemyPositionRelativeToSelfSpriteColliderSize(SelfSpriteCollider, EnemyGO) , Time.deltaTime * speed);
     }
 
